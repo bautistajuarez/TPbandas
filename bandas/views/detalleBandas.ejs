@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul> 
+        <% for(let i = 0; i < resultado.length; i++) { %>
+            <li><a href=""><%= resultado[i].nombre %></a></li>
+            <li>Género: <a href="/bandas/genero/<%= resultado[i].genero %>"><%= resultado[i].genero %></a></li>
+            <li>Cantidad de integrantes: <%= resultado[i].integrantes %></li>
+            <li><%= resultado[i].topCanciones[i] %></li>
+            <li>Video: <a href="<%= resultado[i].video %>"><%= resultado[i].video %></a></li>
+            <li><img src="<%= resultado[i].cover %>" alt="foto"></li>
+
+        <% } %>
+    </ul>
+    
+</body>
+</html>
